@@ -1,5 +1,7 @@
 package com.example.searchinterface;
 
+import graphql.GraphQLContext;
+import graphql.schema.DataFetchingEnvironment;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.graphql.data.method.annotation.Argument;
@@ -19,20 +21,7 @@ public class SearchController {
     }
 
     @QueryMapping
-    Iterable<Resource> resource(@Argument String type, @Argument String query) {
-        return searchRepository.getAll();
+    Iterable<Resource> resource(@Argument String type, @Argument String query, @Argument String context) {
+        return searchRepository.fetchResults(type, query, context);
     }
-
-//    @QueryMapping
-//    Iterable<Resource> resource(@RequestBody Map<String, Object> body) {
-//        Map<String, Object> context = (Map<String, Object>) body.get("context");
-//        Map<String, Object> query = (Map<String, Object>) body.get("query");
-//
-//        LOGGER.info("context: {}", context);
-//        LOGGER.info("query: {}", query);
-//
-//        return searchRepository.getAll();
-//    }
-
-
 }
