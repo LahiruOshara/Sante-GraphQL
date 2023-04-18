@@ -1,15 +1,10 @@
 package com.example.searchinterface;
 
-import graphql.GraphQLContext;
-import graphql.schema.DataFetchingEnvironment;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.graphql.data.method.annotation.Argument;
 import org.springframework.graphql.data.method.annotation.QueryMapping;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestBody;
-
-import java.util.Map;
 
 @Controller
 public class SearchController {
