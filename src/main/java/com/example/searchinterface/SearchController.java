@@ -22,6 +22,7 @@ public class SearchController {
 
     @QueryMapping
     Iterable<Resource> resource(@Argument String type, @Argument String query, @Argument String context) {
+        LOGGER.info("Executing Query-> query: {}, type: {} and context: {}", query, type, context);
         return searchRepository.fetchResults(type, query, context);
     }
 }
