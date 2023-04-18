@@ -1,5 +1,7 @@
-package com.example.searchinterface;
+package com.example.searchinterface.controller;
 
+import com.example.searchinterface.dto.Resource;
+import com.example.searchinterface.repository.SearchRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.graphql.data.method.annotation.Argument;

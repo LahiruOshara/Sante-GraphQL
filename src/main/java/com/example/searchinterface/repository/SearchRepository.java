@@ -1,5 +1,6 @@
-package com.example.searchinterface;
+package com.example.searchinterface.repository;
 
+import com.example.searchinterface.dto.Resource;
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 import org.slf4j.Logger;
@@ -13,9 +14,7 @@ import java.util.List;
 public class SearchRepository {
     private static final Logger LOGGER = LoggerFactory.getLogger(SearchRepository.class);
 
-    SearchRepository() {
-
-    }
+    SearchRepository() {}
 
     public List<Resource> fetchResults(String type, String query, String context) {
         // prepare context object
