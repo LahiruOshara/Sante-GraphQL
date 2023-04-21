@@ -22,4 +22,10 @@ public class SearchController {
         LOGGER.info("Executing Query-> query: {}, type: {} and context: {}", query, type, context);
         return searchService.fetchResults(type, query, context);
     }
+
+    @QueryMapping
+    Iterable<Resource> fetchResource(@Argument String query, @Argument String context) {
+        LOGGER.info("Executing Query-> query: {} and context: {}", query, context);
+        return searchService.fetchResults(query, context);
+    }
 }
