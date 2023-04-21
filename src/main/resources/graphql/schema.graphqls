@@ -1,5 +1,6 @@
 type Query {
     resource(type: String!, query: String!, context: String!): [Resource]
+    fetchResource(query: String!, context: String!): [Resource]
 }
 
 type Resource {

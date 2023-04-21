@@ -16,6 +16,13 @@ public class SearchService {
 
     SearchService() {}
 
+    public List<Resource> fetchResults(String query, String context) {
+        // prepare context object
+        JsonObject contextObject = prepareContextObject(context);
+
+        return getAll();
+    }
+
     public List<Resource> fetchResults(String type, String query, String context) {
         // prepare context object
         JsonObject contextObject = prepareContextObject(context);
