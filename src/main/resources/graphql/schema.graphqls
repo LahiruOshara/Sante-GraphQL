@@ -1,0 +1,9 @@
+type Query {
+    resource(type: String!, query: String!): [Resource]
+}
+
+type Resource {
+    type: String!
+    name: String!
+    url: String!
+}
